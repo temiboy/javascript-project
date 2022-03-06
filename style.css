@@ -1,0 +1,155 @@
+body{
+    overflow-y: hidden;
+  }
+  
+  .container{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50%;
+    position: relative;    
+  }
+  
+  header{
+    display: block;
+    text-align: center;
+    width: 99%;
+    background-color: pink;
+    padding: 10px;
+  }
+nav a:visited,
+nav a:link{
+  text-decoration: none;
+  color: blue;
+  
+}
+
+nav>ul{
+  display: inline;
+  padding: 0;
+  font-size: 20px;
+  
+}
+
+nav>ul>li{
+  display: inline-block;
+  list-style: none;
+  margin: 0 5px 0 5px;
+}
+
+.product{
+  display: flex;
+  
+  width: 100%;
+  font-size: 20px;
+  
+}
+
+.spec1{
+  padding: 10px;
+  width: 100%;
+}
+
+h1{
+  text-align: center;
+  color: green;
+  font-size: 20px;
+  margin-top: 0;
+ 
+  
+}
+
+p, h3, h4, h5{
+  font-size: 20px;
+  text-align: center;
+  
+}
+h3{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 30px;
+}
+  .image{
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  #prev{  
+    position: absolute;
+    top: 43%;
+    left: 0;
+    cursor: pointer;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 3rem;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  #next{
+    position: absolute;
+    top: 43%;
+    right: 0;
+    cursor: pointer;
+    padding: 16px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 3rem;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  #prev:hover, #next:hover {
+    background: rgba(0, 0, 0, 0.5);
+  } 
+  
+  .dots{
+    text-align: center;
+    margin-top: 2%;
+  }
+  
+  .dot{
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    /* transition from one do to the next */
+    transition: background-color 0.6s ease;
+  }
+  
+  /* We create this class with JavaScript. It makes the current dot darker gray */
+  .active{
+    background-color: #717171;
+  } 
+  
+  /* create fade animation when switching between images */
+  .fade{
+  /* Animation support for different browsers */
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+  }
+  
+  @keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+  } 
+  
+  @media(max-width:768px){
+      .container{
+          width: 100%;
+      }
+  }
